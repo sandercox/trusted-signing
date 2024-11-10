@@ -122,3 +122,4 @@ runs:
         echo "set METADATA=$env:USERPROFILE\AppData\Local\TrustedSigning\metadata.json" >> $env:USERPROFILE\AppData\Local\TrustedSigning\trusted-signing.cmd
         echo """%SIGN_TOOL%"" sign /v  /fd SHA256 /tr ""http://timestamp.acs.microsoft.com"" /td SHA256 /dlib ""%TRUSTED_SIGNING_DLL%"" /dmdf ""%METADATA%"" %*" >> $env:USERPROFILE\AppData\Local\TrustedSigning\trusted-signing.cmd
         echo "TRUSTED_SIGNTOOL=$env:USERPROFILE\AppData\Local\TrustedSigning\trusted-signing.cmd" >> $env:GITHUB_ENV
+        Add-Content $env:GITHUB_PATH "$env:USERPROFILE\AppData\Local\TrustedSigning"

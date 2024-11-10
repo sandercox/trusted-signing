@@ -16,7 +16,7 @@ This sets up an Azure trusted signing sign tool script
 
 ```yaml
 - name: Prepare for codesigning
-  uses: ./.github/trusted-signing
+  uses: sandercox/trusted-signing
   with:
     endpoint: "https://weu.codesigning.azure.net"
     account_name: "<<TRUSTED_SIGNING_ACCOUNT_NAME>>"
